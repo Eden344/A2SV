@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MenuMate · Restaurant</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="app-header" role="banner">
+      <div class="bar container">
+        <a class="brand" href="/app-home.html">
+          <img src="/assets/logo.svg" alt="MenuMate logo" width="28" height="28">
+          <span>MenuMate</span>
+        </a>
+        <div class="header-actions">
+          <label class="visually-hidden" for="lang">Language</label>
+          <select id="lang" class="lang-select" aria-label="Language selector">
+            <option selected>English (EN)</option>
+            <option>Amharic (አማርኛ)</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container flow">
+      <article class="card">
+        <img class="card-media cover" src="/assets/sample-restaurant.svg" alt="Kategna restaurant cover">
+        <div class="card-body">
+          <h1 class="card-title">Kategna</h1>
+          <p class="card-desc">4.6 ★ · $$ · Bole Sub-city, Addis Ababa</p>
+          <p class="help">Open today: 8:00–22:00 · +251 11 234 5678</p>
+        </div>
+      </article>
+
+      <section class="tabs" aria-labelledby="menu-tabs">
+        <h2 id="menu-tabs" class="visually-hidden">Restaurant information</h2>
+        <input type="radio" name="tabs" id="tab-menu" checked>
+        <input type="radio" name="tabs" id="tab-about">
+        <input type="radio" name="tabs" id="tab-reviews">
+        <div class="tab-list" role="tablist">
+          <label for="tab-menu" role="tab" aria-controls="panel-menu">Menu</label>
+          <label for="tab-about" role="tab" aria-controls="panel-about">About</label>
+          <label for="tab-reviews" role="tab" aria-controls="panel-reviews">Reviews</label>
+        </div>
+        <div class="panels">
+          <section id="panel-menu" role="tabpanel" class="tab-panel" aria-labelledby="tab-menu">
+            <div class="grid cols-2">
+              <article class="card">
+                <a href="/item.html"><img class="card-media cover" src="/assets/sample-dish.svg" alt="Doro Wat"></a>
+                <div class="card-body">
+                  <h3 class="card-title"><a href="/item.html">Doro Wat</a></h3>
+                  <p class="card-desc">Rich chicken stew with berbere spice.</p>
+                </div>
+                <div class="card-meta"><span>ETB 350</span><span>Popular</span></div>
+              </article>
+              <article class="card">
+                <a href="/item.html"><img class="card-media cover" src="/assets/sample-dish.svg" alt="Shiro"></a>
+                <div class="card-body">
+                  <h3 class="card-title"><a href="/item.html">Shiro</a></h3>
+                  <p class="card-desc">Fasting-friendly chickpea stew.</p>
+                </div>
+                <div class="card-meta"><span>ETB 180</span><span>Fasting</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section id="panel-about" role="tabpanel" class="tab-panel" aria-labelledby="tab-about">
+            <h3>About</h3>
+            <p>Authentic Ethiopian dishes served in a cozy atmosphere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="grid cols-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Hours</h4>
+                  <ul class="list">
+                    <li>Mon–Fri: 8:00–22:00</li>
+                    <li>Sat–Sun: 9:00–23:00</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Contact</h4>
+                  <ul class="list">
+                    <li>Phone: +251 11 234 5678</li>
+                    <li>Address: Bole Sub-city, Addis Ababa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="chips mt-4">
+              <span class="chip">Vegan options</span>
+              <span class="chip">Fasting</span>
+              <span class="chip">Non-Fasting</span>
+            </div>
+            <div class="empty mt-4" role="img" aria-label="Map placeholder">Map preview (static)</div>
+          </section>
+
+          <section id="panel-reviews" role="tabpanel" class="tab-panel" aria-labelledby="tab-reviews">
+            <h3>Reviews</h3>
+            <article class="card">
+              <div class="card-body">
+                <strong>Helina</strong>
+                <div class="help">4 ★ · 2 days ago</div>
+                <p class="mt-2">Great food and friendly staff!</p>
+              </div>
+            </article>
+
+            <form class="grid mt-4" action="#" method="post" aria-describedby="review-note">
+              <div class="field">
+                <label class="label" for="name">Name</label>
+                <input class="input" id="name" name="name" type="text" required>
+              </div>
+              <fieldset class="field">
+                <legend class="label">Rating</legend>
+                <div class="rating" aria-label="Rate from 1 to 5 stars">
+                  <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                  <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                  <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                  <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                  <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label class="label" for="comment">Comment</label>
+                <textarea class="textarea" id="comment" name="comment"></textarea>
+              </div>
+              <div class="field">
+                <label class="label" for="photo">Photo</label>
+                <input class="file" id="photo" name="photo" type="file" accept="image/*">
+                <p class="help">Uploads are not processed in this prototype.</p>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit review</button>
+              <p id="review-note" class="help">This is a static prototype.</p>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" role="navigation" aria-label="Primary">
+      <div class="inner container">
+        <a href="/app-home.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/></svg>
+          <span class="visually-hidden">Home</span>
+        </a>
+        <a href="/restaurants.html" aria-current="page">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4zm2 4h12v12H6z"/></svg>
+          <span class="visually-hidden">Restaurants</span>
+        </a>
+        <a href="/scan.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M4 7V5h5v2zm11 0V5h5v2zM4 19v-2h5v2zm11 0v-2h5v2zM7 9h10v6H7z"/></svg>
+          <span class="visually-hidden">Scan</span>
+        </a>
+        <a href="/favorites.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21l-1.4-1.2C6 16 3 13.3 3 9.9A4.9 4.9 0 018 5c1.6 0 3 .8 4 2a5.1 5.1 0 014-2 4.9 4.9 0 015 4.9c0 3.4-3 6.1-7.6 9.9z"/></svg>
+          <span class="visually-hidden">Favorites</span>
+        </a>
+        <a href="/profile.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg>
+          <span class="visually-hidden">Profile</span>
+        </a>
+      </div>
+    </nav>
+
+    <footer class="app-footer" role="contentinfo">
+      <nav class="inner container" aria-label="Footer">
+        <a href="/index.html">About</a>
+        <a href="#" aria-disabled="true" tabindex="-1">Privacy</a>
+        <a href="#" aria-disabled="true" tabindex="-1">Terms</a>
+      </nav>
+    </footer>
+  </body>
+</html>

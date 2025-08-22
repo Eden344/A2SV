@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MenuMate · Scan</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="app-header" role="banner">
+      <div class="bar container">
+        <a class="brand" href="/app-home.html">
+          <img src="/assets/logo.svg" alt="MenuMate logo" width="28" height="28">
+          <span>MenuMate</span>
+        </a>
+        <div class="header-actions">
+          <label class="visually-hidden" for="lang">Language</label>
+          <select id="lang" class="lang-select" aria-label="Language selector">
+            <option selected>English (EN)</option>
+            <option>Amharic (አማርኛ)</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container flow">
+      <h1>Scan a menu</h1>
+      <p class="help">This is a static prototype. Uploads and live scanning are not implemented; use the controls below and continue to a sample result.</p>
+
+      <form class="grid" action="/scan-result.html" method="get" enctype="multipart/form-data">
+        <section class="card">
+          <div class="card-body">
+            <h2 class="card-title">1) Upload a menu photo</h2>
+            <p class="card-desc">Choose an image file of a paper menu.</p>
+            <label class="field" for="menu-photo">
+              <span class="label">Menu photo (JPG/PNG)</span>
+              <input class="file" id="menu-photo" name="menu-photo" type="file" accept="image/*">
+            </label>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-body">
+            <h2 class="card-title">2) Scan a QR code live</h2>
+            <p class="card-desc">Opens camera to scan a QR in a real app.</p>
+            <button class="btn btn-ghost" type="button" title="Static demo; camera not available">Start camera (placeholder)</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-body">
+            <h2 class="card-title">3) Upload a QR image</h2>
+            <p class="card-desc">Upload an image containing a QR code.</p>
+            <label class="field" for="qr-photo">
+              <span class="label">QR image (JPG/PNG)</span>
+              <input class="file" id="qr-photo" name="qr-photo" type="file" accept="image/*">
+            </label>
+          </div>
+        </section>
+
+        <div class="chips">
+          <button class="btn btn-primary" type="submit">Process (go to sample)</button>
+          <a class="btn btn-ghost" href="/app-home.html">Cancel</a>
+        </div>
+      </form>
+
+      <section class="notice" role="note">
+        Tip: You can go to the sample digitized menu directly: <a href="/scan-result.html">view sample</a>.
+      </section>
+    </main>
+
+    <nav class="bottom-nav" role="navigation" aria-label="Primary">
+      <div class="inner container">
+        <a href="/app-home.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/></svg>
+          <span class="visually-hidden">Home</span>
+        </a>
+        <a href="/restaurants.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4zm2 4h12v12H6z"/></svg>
+          <span class="visually-hidden">Restaurants</span>
+        </a>
+        <a href="/scan.html" aria-current="page">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M4 7V5h5v2zm11 0V5h5v2zM4 19v-2h5v2zm11 0v-2h5v2zM7 9h10v6H7z"/></svg>
+          <span class="visually-hidden">Scan</span>
+        </a>
+        <a href="/favorites.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21l-1.4-1.2C6 16 3 13.3 3 9.9A4.9 4.9 0 018 5c1.6 0 3 .8 4 2a5.1 5.1 0 014-2 4.9 4.9 0 015 4.9c0 3.4-3 6.1-7.6 9.9z"/></svg>
+          <span class="visually-hidden">Favorites</span>
+        </a>
+        <a href="/profile.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z"/></svg>
+          <span class="visually-hidden">Profile</span>
+        </a>
+      </div>
+    </nav>
+
+    <footer class="app-footer" role="contentinfo">
+      <nav class="inner container" aria-label="Footer">
+        <a href="/index.html">About</a>
+        <a href="#" aria-disabled="true" tabindex="-1">Privacy</a>
+        <a href="#" aria-disabled="true" tabindex="-1">Terms</a>
+      </nav>
+    </footer>
+  </body>
+</html>

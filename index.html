@@ -1,22 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    
-</head>
-<body>
-    <div class="todo-container">
-        <h1>TODO LIST</h1>
-        <input type="text" placeholder="task you want to add" id = "taskInput">
-        <button onclick=" addTask()" id ="btn">Add task</button> <hr>
-        <ul id = "todoList"></ul>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MenuMate · Onboarding</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="app-header" role="banner">
+      <div class="bar container">
+        <a class="brand" href="/index.html">
+          <img src="/assets/logo.svg" alt="MenuMate logo" width="28" height="28">
+          <span>MenuMate</span>
+        </a>
+        <div class="header-actions">
+          <label class="visually-hidden" for="lang">Language</label>
+          <select id="lang" class="lang-select" aria-label="Language selector">
+            <option selected>English (EN)</option>
+            <option>Amharic (አማርኛ)</option>
+          </select>
+          <a class="btn btn-ghost" href="/signin.html">Sign in</a>
+          <a class="btn btn-primary" href="/signup.html">Create account</a>
+        </div>
+      </div>
+    </header>
 
-    </div>
-    
-    <script src = "index.js"> 
-    </script>
-</body>
+    <main id="main" class="container flow">
+      <section class="hero" aria-labelledby="tagline">
+        <h1 id="tagline">Digitize and understand menus across Ethiopia</h1>
+        <p>Translate dishes, hear chef tips, and find nearby restaurants. This is a static prototype.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="/signup.html">Create Account</a>
+          <a class="btn btn-secondary" href="/signin.html">Sign In</a>
+          <a class="btn btn-ghost" href="/home.html" aria-describedby="explore-note">Explore (read-only)</a>
+        </div>
+        <p id="explore-note" class="help">Interactive features are disabled in this demo.</p>
+      </section>
+
+      <section aria-labelledby="feature1" class="grid cols-2">
+        <div class="card" tabindex="0">
+          <div class="card-media" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 id="feature1" class="card-title">Digitize Menus</h2>
+            <p class="card-desc">Snap a photo to convert paper menus into searchable, readable items.</p>
+          </div>
+        </div>
+        <div class="card" tabindex="0">
+          <div class="card-media" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 class="card-title">Translate Dishes</h2>
+            <p class="card-desc">Instantly see dish names and descriptions in Amharic and English.</p>
+          </div>
+        </div>
+        <div class="card" tabindex="0">
+          <div class="card-media" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 class="card-title">Chef Tips (Audio)</h2>
+            <p class="card-desc">Hear pronunciation and quick tips on how to enjoy each dish.</p>
+          </div>
+        </div>
+        <div class="card" tabindex="0">
+          <div class="card-media" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 class="card-title">Find Nearby Restaurants</h2>
+            <p class="card-desc">Browse popular spots around you with fasting and non-fasting filters.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner" aria-labelledby="cta-banner">
+        <h2 id="cta-banner" class="mb-2">Get started</h2>
+        <p class="mb-3">Create an account to save favorites and see full menus.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="/signup.html">Create Account</a>
+          <a class="btn btn-ghost" href="/home.html">Explore first</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer" role="contentinfo">
+      <nav class="inner container" aria-label="Footer">
+        <a href="/index.html">About</a>
+        <a href="#" aria-disabled="true" tabindex="-1">Privacy</a>
+        <a href="#" aria-disabled="true" tabindex="-1">Terms</a>
+      </nav>
+    </footer>
+  </body>
 </html>
